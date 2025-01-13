@@ -1,0 +1,8 @@
+# Ignore the img folder
+assets/img/
+
+# Ignore the pdf folder
+assets/pdf/
+
+# Ignore the specific text file
+Text Portfolio Alexa.txt
