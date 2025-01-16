@@ -31,6 +31,27 @@ function linkAction(){
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
 /*==================== ACCORDION SKILLS ====================*/
+const expContent = document.getElementsByClassName('exp__content'),
+      expHeader = document.querySelectorAll('.exp__header');
+
+function toggleExp() {
+    let itemClass = this.parentNode.className;
+
+    // Close all experience sections
+    for (let i = 0; i < expContent.length; i++) {
+        expContent[i].className = 'exp__content skills__close';
+    }
+
+    // Open the clicked experience section if it was closed
+    if (itemClass === 'exp__content skills__close') {
+        this.parentNode.className = 'exp__content skills__open';
+    }
+}
+
+// Add event listener to all experience headers
+expHeader.forEach((el) => {
+    el.addEventListener('click', toggleExp);
+});
 
 
 /*==================== QUALIFICATION TABS ====================*/
